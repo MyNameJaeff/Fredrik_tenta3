@@ -1,0 +1,50 @@
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+main>form {
+    width: 30%;
+}
+
+/* ALLLLL */
+#cardHolder{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+    object-fit: fill;
+}
+.cardImgDiv{
+    width: 100%;
+    height: 40%;
+}
+.card {
+    width: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 0% 1%;
+    margin-top: 1%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
