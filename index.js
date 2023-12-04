@@ -138,7 +138,7 @@ app.post("/loginUser", async (req, res) => {
 
 app.post("/createUser", async (req, res) => {
   console.log("Posted");
-  if (req.body != null) {
+  if (req.body != null && (req.body.password === req.body.passwordCheck)) {
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
     const user = {
@@ -171,6 +171,10 @@ app.post("/createUser", async (req, res) => {
       res.redirect("/create_posts.html");
     }
     console.log(req.body);
+  }else{
+    res.redirect("/createUser");
+    /* io.emit("error", "Passwords are not the same!");  DOES NOT WANT TO DO IT!!!*/
+    console.log("Some error occured! / Not same password!");
   }
 });
 
